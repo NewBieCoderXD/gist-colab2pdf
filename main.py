@@ -1,4 +1,5 @@
 GITHUB_GIST_DOMAIN = "https://gist.github.com"
+# edit this
 COLAB_URL = ""
 
 def get_notebook_param():
@@ -44,8 +45,8 @@ def get_unzipped_folder(github_gist_id, archive_id):
   return "/gistColab2Pdf/unzipped/{}-{}".format(github_gist_id, archive_id)
 
 def convert_to_pdf(unzipped_folder, github_title):
-  ! pip install -U nbconvert "PyPDF2<3.0.0" pyppeteer
-  ! pip install --no-deps notebook-as-pdf
+  ! pip install --quiet -U nbconvert "PyPDF2<3.0.0" pyppeteer
+  ! pip install  --quiet --no-deps notebook-as-pdf
   ! pyppeteer-install
   notebook_location = "{}/{}".format(unzipped_folder,github_title)
   ! jupyter nbconvert --to pdfviahtml $notebook_location
