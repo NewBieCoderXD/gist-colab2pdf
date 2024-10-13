@@ -54,6 +54,7 @@ def get_unzipped_folder(github_gist_id, archive_id):
 
 def convert_to_pdf(unzipped_folder, github_title):
   ! pip install -U nbconvert "PyPDF2<3.0.0" pyppeteer
+  ! pip install --no-deps notebook-as-pdf
   ! pyppeteer-install
   notebook_location = "{}/{}".format(unzipped_folder,github_title)
   ! jupyter nbconvert --to pdfviahtml $notebook_location
