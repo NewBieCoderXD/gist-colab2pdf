@@ -3,7 +3,7 @@ Python notebook in colab to pdf converter.
 
 # Usage
   - Copy code in below into last cell of colab.
-  - Copy url of colab into variable COLAB_URL and run.
+  - Change url of colab as argument of gist_colab2pdf function and run.
 
 # Code
 ```
