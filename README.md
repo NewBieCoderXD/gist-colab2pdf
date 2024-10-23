@@ -9,5 +9,7 @@ Python notebook in colab to pdf converter.
 ```
 ! wget -nc https://raw.githubusercontent.com/NewBieCoderXD/gist-colab2pdf/refs/heads/main/gist_colab2pdf.ipynb
 %run gist_colab2pdf.ipynb
-gist_colab2pdf("https://colab.research.google.com/gist/...")
+gist_colab2pdf("https://colab.research.google.com/gist/...",Method.WEBPDF)
+# or
+# gist_colab2pdf("https://colab.research.google.com/gist/...",Method.LATEX)
 ```
